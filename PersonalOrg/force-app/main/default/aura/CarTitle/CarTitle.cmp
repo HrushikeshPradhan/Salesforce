@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	<aura:attribute name="Car" type = "Car__c" access = "Public"
+                    default ="{
+                              'sObjectType' : 'Car__c',
+                              'Name':'Manish',
+                              'Picture_c':'/resource/cars/luxury/ford_mustang.jpeg'
+                              }"/>
+    
+</aura:component>

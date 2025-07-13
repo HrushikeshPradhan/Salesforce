@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Stage__c</fullName>
+    <label>Business Stage</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OFFER</fullName>
+                <default>false</default>
+                <label>OFFER</label>
+            </value>
+            <value>
+                <fullName>LOST</fullName>
+                <default>false</default>
+                <label>LOST</label>
+            </value>
+            <value>
+                <fullName>WON</fullName>
+                <default>false</default>
+                <label>WON</label>
+            </value>
+            <value>
+                <fullName>LEAD</fullName>
+                <default>false</default>
+                <label>LEAD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

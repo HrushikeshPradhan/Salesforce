@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JTracker</fullName>
+    <columns>LEAD.COMPANY</columns>
+    <columns>Role__c</columns>
+    <columns>Date_Applied__c</columns>
+    <columns>Close_Date__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Type__c</columns>
+    <columns>Sub_Type__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Role__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>JTracker</label>
+</ListView>

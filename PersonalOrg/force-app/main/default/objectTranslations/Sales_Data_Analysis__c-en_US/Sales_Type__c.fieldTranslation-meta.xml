@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sales Type --></label>
+    <name>Sales_Type__c</name>
+    <picklistValues>
+        <masterLabel>AM</masterLabel>
+        <translation><!-- AM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agent</masterLabel>
+        <translation><!-- Agent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CT Lead</masterLabel>
+        <translation><!-- CT Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hunter</masterLabel>
+        <translation><!-- Hunter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KAM</masterLabel>
+        <translation><!-- KAM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner Sales</masterLabel>
+        <translation><!-- Partner Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAM</masterLabel>
+        <translation><!-- SAM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Assistant</masterLabel>
+        <translation><!-- Sales Assistant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Manager</masterLabel>
+        <translation><!-- Sales Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Support</masterLabel>
+        <translation><!-- Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telesales</masterLabel>
+        <translation><!-- Telesales --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

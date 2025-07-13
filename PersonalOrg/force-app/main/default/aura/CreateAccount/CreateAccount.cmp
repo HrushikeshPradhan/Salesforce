@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller ="CreateNewAccount" >
+	
+    <aura:attribute name = "newLabel" type = "String" default = "Create Account"/>
+    <aura:attribute name = "newResult" type = "String"/>
+    
+ <!--     <aura:handler name = "init" value = "{!this}" action = "{!c.doInit}"/> -->
+    
+    <lightning:layout horizontalAlign="Center">
+        <lightning:layoutItem>
+              <img src="https://upload.wikimedia.org/wikipedia/en/d/d4/Mickey_Mouse.png"/>   
+        </lightning:layoutItem>
+          <lightning:layoutItem padding="around-small">
+             <h1 class="green">{!v.newResult}</h1>
+             <lightning:input type = "String" aura:id="inputName" name="newName" label="Account Name:" />
+             <lightning:input type = "String" aura:id="inputYear" name="newYear" label="Year Started:" />
+             <lightning:input type = "String" aura:id="inputPhone" name="newPhone" label="Phone:" />
+              <br/><lightning:button label ="{!v.newLabel}" onclick="{!c.newRecord}" variant="brand"/>	
+ 	      </lightning:layoutItem>
+        
+    </lightning:layout>
+    
+</aura:component>

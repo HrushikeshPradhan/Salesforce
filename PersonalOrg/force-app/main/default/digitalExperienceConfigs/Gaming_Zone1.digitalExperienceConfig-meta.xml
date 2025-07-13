@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DigitalExperienceConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Gaming Zone</label>
+    <site>
+        <urlPathPrefix>gzone</urlPathPrefix>
+    </site>
+    <space>site/Gaming_Zone1</space>
+</DigitalExperienceConfig>

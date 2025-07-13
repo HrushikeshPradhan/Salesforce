@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller ="CreateNewAccount" >
+	
+    <aura:attribute name = "newLabel" type = "String" default = "Add"/>
+    <aura:attribute name = "newResult" type = "Integer"/>
+    
+ <!--     <aura:handler name = "init" value = "{!this}" action = "{!c.doInit}"/> -->
+    
+    <lightning:layout horizontalAlign="Center">
+        <lightning:layoutItem>
+         <img src="https://www.asianpaints.com/content/dam/asianpaints/ecomm-pdts/wall-decals/NilayaWallStickers/Mickey-Mouse-Alone-Wall-sticker-3.jpg.image.673.673.medium.jpg"/>   
+        </lightning:layoutItem>
+          <lightning:layoutItem padding="around-small">
+             <h1 class="green">{!v.newResult}</h1>
+             <lightning:input type = "Integer" aura:id="inputNumber1" name="FirstNumber" label="Enter First Number:" />
+             <lightning:input type = "Integer" aura:id="inputNumber2" name="SecondNumber" label="Enter Second Number:" />
+              <br/><lightning:button label ="{!v.newLabel}" onclick="{!c.AddNumbers}" variant="brand"/>	
+ 	      </lightning:layoutItem>
+        
+    </lightning:layout>
+    
+</aura:component>

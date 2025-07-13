@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Type__c</fullName>
+    <label>Sales Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agent</fullName>
+                <default>false</default>
+                <label>Agent</label>
+            </value>
+            <value>
+                <fullName>AM</fullName>
+                <default>false</default>
+                <label>AM</label>
+            </value>
+            <value>
+                <fullName>CT Lead</fullName>
+                <default>false</default>
+                <label>CT Lead</label>
+            </value>
+            <value>
+                <fullName>Hunter</fullName>
+                <default>false</default>
+                <label>Hunter</label>
+            </value>
+            <value>
+                <fullName>KAM</fullName>
+                <default>false</default>
+                <label>KAM</label>
+            </value>
+            <value>
+                <fullName>Partner Sales</fullName>
+                <default>false</default>
+                <label>Partner Sales</label>
+            </value>
+            <value>
+                <fullName>Sales Assistant</fullName>
+                <default>false</default>
+                <label>Sales Assistant</label>
+            </value>
+            <value>
+                <fullName>Sales Manager</fullName>
+                <default>false</default>
+                <label>Sales Manager</label>
+            </value>
+            <value>
+                <fullName>SAM</fullName>
+                <default>false</default>
+                <label>SAM</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>Telesales</fullName>
+                <default>false</default>
+                <label>Telesales</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

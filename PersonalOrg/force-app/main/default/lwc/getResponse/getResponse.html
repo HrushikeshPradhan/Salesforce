@@ -1,0 +1,9 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-around_medium">
+            <lightning-button label="Get Response" onclick={handleGetResponse} variant="brand"></lightning-button>
+            <lightning-textarea label="Status code" value={statusCode} disabled></lightning-textarea>
+            <lightning-textarea label="Status text" value={statusText} disabled></lightning-textarea>
+        </div>
+    </lightning-card>
+</template>

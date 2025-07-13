@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Business Type --></label>
+    <name>Business_Type__c</name>
+    <picklistValues>
+        <masterLabel>CROSS-SELLING</masterLabel>
+        <translation><!-- CROSS-SELLING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NEW BUSINESS</masterLabel>
+        <translation><!-- NEW BUSINESS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UP-SELLING</masterLabel>
+        <translation><!-- UP-SELLING --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

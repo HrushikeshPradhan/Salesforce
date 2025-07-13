@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Business Stage --></label>
+    <name>Business_Stage__c</name>
+    <picklistValues>
+        <masterLabel>LEAD</masterLabel>
+        <translation><!-- LEAD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LOST</masterLabel>
+        <translation><!-- LOST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OFFER</masterLabel>
+        <translation><!-- OFFER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WON</masterLabel>
+        <translation><!-- WON --></translation>
+    </picklistValues>
+</CustomFieldTranslation>
