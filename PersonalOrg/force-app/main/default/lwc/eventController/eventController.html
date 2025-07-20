@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title ="Paginator">
+        <div class="slds-text-align_center slds-p-top_small">Page : {currentPage} of {totalPages}</div>
+            <c-paginator 
+                currentpage={currentPage}
+                totalpages={totalPages}
+                onpagechange={handlePageChange}>
+            </c-paginator>
+    </lightning-card>
+</template>

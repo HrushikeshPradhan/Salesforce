@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-text-align_center slds-p-top_small">
+        <lightning-layout title="">
+            <lightning-layout-item>
+                <lightning-button label="Previous" 
+                                  onclick={handlePrevious} 
+                                  icon-position="left"></lightning-button>                  
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="grow"></lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-button label="Next" 
+                                  onclick={handleNext} 
+                                  icon-position="right"></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template> 
