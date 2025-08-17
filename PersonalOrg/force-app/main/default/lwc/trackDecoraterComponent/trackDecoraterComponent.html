@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Track Decorator Usage Example" icon-name="custom:custom63">
+        <lightning-input label="First Name" value={firstName} onkeyup={handleFirstNameChange}></lightning-input>
+        <lightning-input label="Last Name" value={lastName} onkeyup={handleLastNameChange}></lightning-input>
+        <div class="slds-m-top_medium" style="border: 1px solid #d8dde6; padding: 10px;">
+            <p>Reactive Output - Primitive:</p>
+            <p>First Name: {firstName}</p>
+            <p>Last Name: {lastName}</p>
+        </div>
+        <div class="slds-m-top_medium" style="border: 1px solid #d8dde6; padding: 10px;">
+            <p>Reactive Output - Track Decorator:</p>
+            <p>First Name: {trackPersonDetails.firstName}</p>
+            <p>Last Name: {trackPersonDetails.lastName}</p>
+        </div>
+        <div class="slds-m-top_medium" style="border: 1px solid #d8dde6; padding: 10px;">
+            <p>Reactive Output - Non-Track Decorator:</p>
+            <p>First Name: {personDetails.firstName}</p>
+            <p>Last Name: {personDetails.lastName}</p>
+        </div>
+    </lightning-card>
+</template>
