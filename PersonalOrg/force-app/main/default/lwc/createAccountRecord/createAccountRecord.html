@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Create Account Record - Lightning Data Service" icon-name="standard:account">
+        <lightning-record-edit-form object-api-name={objectApiName} onsuccess={handleSuccess} onerror={handleError}>
+            <div class="slds-grid slds-wrap slds-form small-form">
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-input-field field-name={nameField} class="slds-m-bottom_small"></lightning-input-field>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-input-field field-name={phoneField} class="slds-m-bottom_small"></lightning-input-field>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-input-field field-name={websiteField} class="slds-m-bottom_small"></lightning-input-field>
+                </div>
+            </div>
+            <lightning-button type="submit" variant="brand" label="Create Account"
+                class="slds-m-top_small"></lightning-button>
+            <lightning-button type="reset" variant="neutral" label="Reset Form"
+                class="slds-m-top_small"></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

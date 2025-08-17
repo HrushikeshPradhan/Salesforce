@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Lifecycle Hooks">
+        <div>
+            <h1>Parent Component</h1>
+            <p>Check lifecycle hooks in the console log.</p>
+        </div>
+        <lightning-button label="Show/Hide" onclick={handleClick}></lightning-button>
+        <template if:true={isChildVisible}>
+            <c-lifecycle-hooks-child-component></c-lifecycle-hooks-child-component>
+        </template>
+    </lightning-card>
+</template>
