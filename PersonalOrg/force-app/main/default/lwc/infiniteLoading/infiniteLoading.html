@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Infinite Loading Data Table">
+        <div style="height: 210px;">
+            <lightning-datatable 
+                key-field="Id" 
+                data={contacts} 
+                columns={columns}
+                enable-infinite-loading={enableInfiniteLoading} 
+                onloadmore={handleLoadMore} 
+                hide-checkbox-column="true">
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

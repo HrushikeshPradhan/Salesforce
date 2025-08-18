@@ -1,6 +1,10 @@
-public class MyContactListController {
-@AuraEnabled
-public static List<Contact> getContacts(Id recordId) {
-   return [Select Id, FirstName, LastName, Email, Phone From Contact Where AccountId = :recordId];
-}
+public with sharing class MyContactListController {
+   @AuraEnabled (cacheable=true)
+   public static List<Contact> getContacts(Integer offset, Integer limitSize) {
+      List<Contact> contacts = new List<Contact>();
+      if (Schema.sObjectType.Contact.isAccessible()) {
+         contacts = [SELECT Id, FirstName, LastName FROM Contact LIMIT :limitSize OFFSET :offset];
+      }
+      return contacts;
+   }
 }
