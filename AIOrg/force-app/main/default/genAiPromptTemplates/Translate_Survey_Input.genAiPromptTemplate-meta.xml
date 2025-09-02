@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>R9uBDTSYj2yxj/ZKf8bWzVyfX7GEFfHFu4c7d6zFjkY=_2</activeVersionIdentifier>
+    <description>Translate Survey comment to English Language</description>
+    <developerName>Translate_Survey_Input</developerName>
+    <masterLabel>Translate Survey Input</masterLabel>
+    <templateVersions>
+        <content>You are a wellness specialist from a company called Tranquil Trails. Review the content {!$Input:Fitness.Survey_Input__c} . If the content is in a language other than English, translate the text into English, following the instructions below.
+Instructions: &quot;&quot;&quot;
+Follow these instructions precisely. Don’t add any information not provided.
+- If the content {!$Input:Fitness.Survey_Input__c} is not in English, translate it into English without copying the text in the original language.
+- Do not explain what you are doing in this situation—simply translate the text.
+- Strictly limit the characters returned to fewer than 255. 
+Now, evaluate the content.
+&quot;&quot;&quot;
+
+</content>
+        <inputs>
+            <apiName>Account</apiName>
+            <definition>SOBJECT://Account</definition>
+            <masterLabel>Account</masterLabel>
+            <referenceName>Input:Account</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Fitness</apiName>
+            <definition>SOBJECT://Fitness__c</definition>
+            <masterLabel>Fitness</masterLabel>
+            <referenceName>Input:Fitness</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>R9uBDTSYj2yxj/ZKf8bWzVyfX7GEFfHFu4c7d6zFjkY=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a wellness specialist from a company called Tranquil Trails. Review the content {!$Input:Fitness.Survey_Input__c} . If the content is in a language other than English, translate the text into English, following the instructions below.
+Instructions: &quot;&quot;&quot;
+Follow these instructions precisely. Don’t add any information not provided.
+- If the content {!$Input:Fitness.Survey_Input__c} is not in English, translate it into English without copying the text in the original language.
+- Do not explain what you are doing in this situation—simply translate the text.
+- Strictly limit the characters returned to fewer than 255. 
+Now, evaluate the content.
+&quot;&quot;&quot;
+
+</content>
+        <inputs>
+            <apiName>Account</apiName>
+            <definition>SOBJECT://Account</definition>
+            <masterLabel>Account</masterLabel>
+            <referenceName>Input:Account</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Fitness</apiName>
+            <definition>SOBJECT://Fitness__c</definition>
+            <masterLabel>Fitness</masterLabel>
+            <referenceName>Input:Fitness</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>R9uBDTSYj2yxj/ZKf8bWzVyfX7GEFfHFu4c7d6zFjkY=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

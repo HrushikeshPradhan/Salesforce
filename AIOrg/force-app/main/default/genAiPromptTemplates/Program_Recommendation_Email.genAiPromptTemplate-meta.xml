@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>R9uBDTSYj2yxj/ZKf8bWzVyfX7GEFfHFu4c7d6zFjkY=_2</activeVersionIdentifier>
+    <description>compare client information with currently available programs and suggest activities and offerings that align with client interests</description>
+    <developerName>Program_Recommendation_Email</developerName>
+    <masterLabel>Program Recommendation Email</masterLabel>
+    <relatedEntity>Contact</relatedEntity>
+    <templateVersions>
+        <content> 
+You are a wellness specialist from a company called Tranquil Trails and the sender of this email, {!$Input:Sender.Name}. You are writing an email to an individual client, {!$Input:Recipient.Name}.
+Instructions: &quot;&quot;&quot;
+Follow these instructions precisely. Don’t add any information not provided.
+Do not use phrases like &quot;I hope this email finds you well&quot; or any other variation that expresses well-wishes for the recipient&apos;s well-being. Use clear, concise, and straightforward language in the active voice, strictly avoiding filler words and phrases or redundant language.
+The email should include the following:
+Generate a subject line that can increase open rate using words and content related to the email body content.
+The salutation must only contain the recipient&apos;s first name.
+Refer to the sender in the singular voice, using references such as &quot;I&quot; and not &quot;we&quot; in the email.
+Convey that you are checking in to follow up and encourage the client&apos;s progress.
+The message should evoke enthusiasm with intensifiers, but limit the use of exclamation points.
+Maintain a casual tone by using contractions and referring to the recipient in the first person, but do not use discourse markers.
+Below are two sets of reference information.
+The first is a list of the recipient&apos;s interests tagged as :Goals.
+The second is a list of the current active programs in a JSON object tagged as :Programs.
+Craft a sales email identifying a maximum of two programs that would be of key interest to the recipient based on their :Goals and the available :Programs.
+### Goals
+{!$RelatedList:Recipient.Fitness__r.Records}
+### Programs
+{!$Apex:Prompt_Program_Recommendation_Invocable.Prompt}
+Follow these instructions strictly to generate the message to be sent to the client.
+&quot;&quot;&quot;
+
+</content>
+        <inputs>
+            <apiName>Sender</apiName>
+            <definition>SOBJECT://User</definition>
+            <referenceName>Input:Sender</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Recipient</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <referenceName>Input:Recipient</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://Prompt_Program_Recommendation_Invocable</definition>
+            <parameters>
+                <definition>SOBJECT://User</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Sender</parameterName>
+                <valueExpression>{!$Input:Sender}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Recipient</parameterName>
+                <valueExpression>{!$Input:Recipient}</valueExpression>
+            </parameters>
+            <referenceName>Apex:Prompt_Program_Recommendation_Invocable</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Recipient.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>Fitness__r</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Recipient.Fitness__r.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>R9uBDTSYj2yxj/ZKf8bWzVyfX7GEFfHFu4c7d6zFjkY=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content> 
+You are a wellness specialist from a company called Tranquil Trails and the sender of this email, {!$Input:Sender.Name}. You are writing an email to an individual client, {!$Input:Recipient.Name}.
+Instructions: &quot;&quot;&quot;
+Follow these instructions precisely. Don’t add any information not provided.
+Do not use phrases like &quot;I hope this email finds you well&quot; or any other variation that expresses well-wishes for the recipient&apos;s well-being. Use clear, concise, and straightforward language in the active voice, strictly avoiding filler words and phrases or redundant language.
+The email should include the following:
+Generate a subject line that can increase open rate using words and content related to the email body content.
+The salutation must only contain the recipient&apos;s first name.
+Refer to the sender in the singular voice, using references such as &quot;I&quot; and not &quot;we&quot; in the email.
+Convey that you are checking in to follow up and encourage the client&apos;s progress.
+The message should evoke enthusiasm with intensifiers, but limit the use of exclamation points.
+Maintain a casual tone by using contractions and referring to the recipient in the first person, but do not use discourse markers.
+Below are two sets of reference information.
+The first is a list of the recipient&apos;s interests tagged as :Goals.
+The second is a list of the current active programs in a JSON object tagged as :Programs.
+Craft a sales email identifying a maximum of two programs that would be of key interest to the recipient based on their :Goals and the available :Programs.
+### Goals
+{!$RelatedList:Recipient.Fitness__r.Records}
+### Programs
+{!$Apex:Prompt_Program_Recommendation_Invocable.Prompt}
+Follow these instructions strictly to generate the message to be sent to the client.
+&quot;&quot;&quot;
+
+</content>
+        <inputs>
+            <apiName>Sender</apiName>
+            <definition>SOBJECT://User</definition>
+            <referenceName>Input:Sender</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Recipient</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <referenceName>Input:Recipient</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://Prompt_Program_Recommendation_Invocable</definition>
+            <parameters>
+                <definition>SOBJECT://User</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Sender</parameterName>
+                <valueExpression>{!$Input:Sender}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Recipient</parameterName>
+                <valueExpression>{!$Input:Recipient}</valueExpression>
+            </parameters>
+            <referenceName>Apex:Prompt_Program_Recommendation_Invocable</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Recipient.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>Fitness__r</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Recipient.Fitness__r.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>R9uBDTSYj2yxj/ZKf8bWzVyfX7GEFfHFu4c7d6zFjkY=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__salesEmail</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

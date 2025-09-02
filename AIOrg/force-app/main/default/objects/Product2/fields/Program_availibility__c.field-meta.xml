@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_availibility__c</fullName>
+    <label>Program availibility</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Afternoon</fullName>
+                <default>false</default>
+                <label>Afternoon</label>
+            </value>
+            <value>
+                <fullName>Day time</fullName>
+                <default>false</default>
+                <label>Day time</label>
+            </value>
+            <value>
+                <fullName>Early Morning</fullName>
+                <default>false</default>
+                <label>Early Morning</label>
+            </value>
+            <value>
+                <fullName>Evenings</fullName>
+                <default>false</default>
+                <label>Evenings</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Week days</fullName>
+                <default>false</default>
+                <label>Week days</label>
+            </value>
+            <value>
+                <fullName>Weekends</fullName>
+                <default>false</default>
+                <label>Weekends</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>E-Mail-Vorlage zur Bestätigung der Stornierung eines bezahlten Servicetermins.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Zahlungsplanung: E-Mail zur Stornierung des Servicetermins</name>
+    <style>none</style>
+    <subject>Termin storniert.</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

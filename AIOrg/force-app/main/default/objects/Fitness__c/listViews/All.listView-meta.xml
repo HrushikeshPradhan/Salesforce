@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Contact__c</columns>
+    <columns>Survey_Input__c</columns>
+    <columns>Translated_Survey_Input__c</columns>
+    <columns>fitness_goal__c</columns>
+    <columns>Title__c</columns>
+    <columns>Skill__c</columns>
+    <columns>Area__c</columns>
+    <columns>interest_type__c</columns>
+    <columns>favorite_exercise__c</columns>
+    <columns>interest_frequency__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Records</label>
+</ListView>

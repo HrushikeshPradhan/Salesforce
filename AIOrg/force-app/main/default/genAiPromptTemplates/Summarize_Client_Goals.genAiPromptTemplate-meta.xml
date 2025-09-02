@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>R9uBDTSYj2yxj/ZKf8bWzVyfX7GEFfHFu4c7d6zFjkY=_2</activeVersionIdentifier>
+    <description>generate text for new Interest summary field for the contact.</description>
+    <developerName>Summarize_Client_Goals</developerName>
+    <masterLabel>Summarize Client Goals</masterLabel>
+    <relatedEntity>Contact</relatedEntity>
+    <relatedField>Contact.Interest_Summary__c</relatedField>
+    <templateVersions>
+        <content>
+You are a wellness coach from a company called Tranquil Trails who wants to see a quick summary of a client&apos;s fitness interests. 
+Review the content in the list of fitness records related to a contact record, {!$RelatedList:Contact.Fitness__r.Records}
+In this list all records relate to the individual contact.
+Fitness records: {!$RelatedList:Contact.Fitness__r.Records}
+Contact name: {!$Input:Contact.FirstName}
+
+Instructions: &quot;&quot;&quot;
+Follow these instructions precisely. Don’t add any information not provided.
+The &quot;contact&quot; must be referred to as a &quot;client&quot; in the summary.
+Use clear, concise, and straightforward language in the active voice and a friendly, informal, informative tone.
+The summary must include the following:
+Use the client&apos;s first name in the first sentence.
+Interpret any reported stress level based on a scale from 1-10, with values of 7-10 being ideal.
+If any values are missing, do not include any reference to missing information.
+Do not address any content or generate answers that don’t have complete data.
+Do not use filler words or phrases or redundant language.
+Use an introductory summary sentence and closing sentence in addition to several bullet points.
+When you format the list, use a variety of emoji as bullet points to add interest.
+Limit the summary to seven sentences.
+&quot;&quot;&quot;
+
+</content>
+        <inputs>
+            <apiName>RelatedEntity</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Contact.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>Fitness__r</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Contact.Fitness__r.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>R9uBDTSYj2yxj/ZKf8bWzVyfX7GEFfHFu4c7d6zFjkY=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>
+You are a wellness coach from a company called Tranquil Trails who wants to see a quick summary of a client&apos;s fitness interests. 
+Review the content in the list of fitness records related to a contact record, {!$RelatedList:Contact.Fitness__r.Records}
+In this list all records relate to the individual contact.
+Fitness records: {!$RelatedList:Contact.Fitness__r.Records}
+Contact name: {!$Input:Contact.FirstName}
+
+Instructions: &quot;&quot;&quot;
+Follow these instructions precisely. Don’t add any information not provided.
+The &quot;contact&quot; must be referred to as a &quot;client&quot; in the summary.
+Use clear, concise, and straightforward language in the active voice and a friendly, informal, informative tone.
+The summary must include the following:
+Use the client&apos;s first name in the first sentence.
+Interpret any reported stress level based on a scale from 1-10, with values of 7-10 being ideal.
+If any values are missing, do not include any reference to missing information.
+Do not address any content or generate answers that don’t have complete data.
+Do not use filler words or phrases or redundant language.
+Use an introductory summary sentence and closing sentence in addition to several bullet points.
+When you format the list, use a variety of emoji as bullet points to add interest.
+Limit the summary to seven sentences.
+&quot;&quot;&quot;
+
+</content>
+        <inputs>
+            <apiName>RelatedEntity</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Contact.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>Fitness__r</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Contact.Fitness__r.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>R9uBDTSYj2yxj/ZKf8bWzVyfX7GEFfHFu4c7d6zFjkY=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__fieldCompletion</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

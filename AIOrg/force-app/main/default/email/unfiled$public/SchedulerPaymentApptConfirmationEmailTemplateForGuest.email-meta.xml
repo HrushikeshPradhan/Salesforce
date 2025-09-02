@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>E-Mail-Vorlage zur Bestätigung der Planung eines Servicetermins für Gastbenutzer.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Zahlungsplanung: E-Mail zur Bestätigung des Servicetermins für Gastbenutzer</name>
+    <style>none</style>
+    <subject>Termin geplant</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

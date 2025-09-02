@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>E-Mail-Vorlage, mit der Kunden daran erinnert werden, für ihren Servicetermin zu zahlen.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Zahlungsplanung: E-Mail mit Zahlungserinnerung für den Servicetermin</name>
+    <style>none</style>
+    <subject>Ihre Zahlung abschließen</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
